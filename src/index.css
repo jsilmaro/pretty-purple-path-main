@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Heartopia-inspired design system: lavender, leaf green, soil brown, gold */
+
+@layer base {
+  :root {
+    --background: 280 45% 97%;
+    --foreground: 270 30% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 270 30% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 30% 18%;
+
+    /* Lavender purple */
+    --primary: 268 65% 62%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 280 80% 78%;
+    --primary-deep: 265 55% 38%;
+
+    /* Soft cream secondary */
+    --secondary: 45 70% 92%;
+    --secondary-foreground: 30 40% 25%;
+
+    --muted: 280 30% 94%;
+    --muted-foreground: 270 15% 45%;
+
+    /* Leaf green accent */
+    --accent: 130 45% 55%;
+    --accent-foreground: 0 0% 100%;
+    --accent-soft: 130 50% 88%;
+
+    /* Soil brown */
+    --soil: 28 45% 38%;
+    --soil-foreground: 45 60% 95%;
+
+    /* Gold */
+    --gold: 42 90% 60%;
+    --gold-foreground: 30 50% 20%;
+
+    --destructive: 350 75% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 280 30% 88%;
+    --input: 280 30% 88%;
+    --ring: 268 65% 62%;
+
+    --radius: 1rem;
+
+    /* Gradients */
+    --gradient-magical: linear-gradient(135deg, hsl(280 80% 78%), hsl(268 65% 62%) 50%, hsl(130 45% 55%));
+    --gradient-sky: linear-gradient(180deg, hsl(280 70% 85%), hsl(45 80% 88%));
+    --gradient-gold: linear-gradient(135deg, hsl(42 95% 70%), hsl(35 85% 55%));
+    --gradient-leaf: linear-gradient(135deg, hsl(130 50% 65%), hsl(140 45% 45%));
+
+    /* Shadows */
+    --shadow-soft: 0 8px 32px -8px hsl(268 65% 62% / 0.35);
+    --shadow-glow: 0 0 40px hsl(280 80% 78% / 0.6);
+    --shadow-card: 0 4px 20px -4px hsl(265 55% 38% / 0.2);
+
+    --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 270 30% 10%;
+    --foreground: 280 40% 95%;
+    --card: 270 30% 14%;
+    --card-foreground: 280 40% 95%;
+    --popover: 270 30% 14%;
+    --popover-foreground: 280 40% 95%;
+    --primary: 280 80% 70%;
+    --primary-foreground: 270 30% 10%;
+    --secondary: 270 25% 20%;
+    --secondary-foreground: 280 40% 95%;
+    --muted: 270 25% 18%;
+    --muted-foreground: 280 20% 70%;
+    --accent: 130 45% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 350 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 270 25% 22%;
+    --input: 270 25% 22%;
+    --ring: 280 80% 70%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Fredoka', 'Quicksand', system-ui, sans-serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .text-shadow-soft {
+    text-shadow: 0 2px 8px hsl(265 55% 38% / 0.4);
+  }
+  .text-shadow-strong {
+    text-shadow: 0 2px 0 hsl(265 55% 38%), 0 4px 12px hsl(265 55% 38% / 0.6);
+  }
+  .bg-gradient-magical { background: var(--gradient-magical); }
+  .bg-gradient-gold { background: var(--gradient-gold); }
+  .bg-gradient-leaf { background: var(--gradient-leaf); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+}
